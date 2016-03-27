@@ -15,3 +15,8 @@ h1{
   text-decoration: line-through;
   color: grey;
 }
+#edit{
+display: none;
+  top: 10px;
+  right: 10px;
+}

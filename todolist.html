@@ -36,18 +36,17 @@
                     <tr data-ng-repeat="list in vm.data">
                         <th scope="row">1</th>
                         <td>{{list.Errand}}</td>
-
                         <td>{{list.Notes}}</td>
                     </tr>
+
                     <tr>
-                        <th scope="row">2</th>
+                        <td data-ng-click="vm.create()">&plus;</td>
                         <td>
                             <input type="text" data-ng-model="vm.new_list_item.Errand" placeholder="Activity Name" /> </td>
                         <td>
                             <input type="text" data-ng-model="vm.new_list_item.Notes" placeholder="Add Notes" /> </td>
 
-                        <td>
-                            <td data-ng-click="vm.create()">&plus;</td>
+
                     </tr>
                 </tbody </table>
         </div>

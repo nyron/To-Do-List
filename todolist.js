@@ -47,30 +47,3 @@ app.controller("ctrl1" , function(){
 
 
 });
-
-var name = "Nyron";
-
-var skills = ['html', 'css'];
-
-var person = {
-  name: '',
-  age: 0,
-};
-
-function greet() {
-  alert("hello world!");
-}
-
-var truth = true;
-
-function gool(item) {
-  console.log(item);
-
-  if(item === '' || item === undefined) {
-    alert("Input Was Empty.");
-    return;
-  }
-
-  alert("Item = " + item);
-
-}

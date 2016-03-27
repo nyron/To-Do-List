@@ -12,8 +12,65 @@ app.controller("ctrl1" , function(){
   vm.create = function(){
     vm.data.push(angular.copy(vm.new_list_item));
     vm.new_lists_item = {};
+    $(".clear").val('');
   };
 
+  vm.delete = function(deleteitem){
+
+    console.log(deleteitem);
+    var index = data.indexOf(deleteitem);
+    console.log(index);
+    data.splice(index , 1);
+  };
+
+  vm.edit = function(edit){
+    console.log(edit);
+
+    $("#edit").show("fast");
+    vm.editdone = function(){
+      var editname = $("#editname").val();
+      var editnotes = $("#editnotes").val();
+
+        if(editname === '' || editnotes === ''){
+          alert("add values");
+          return;
+        }
+        edit.Errand = editname;
+        edit.Notes = editnotes;
+        $(".clear").val('');
+          $("#edit").hide("fast");
+        return edit;
+
+    };
+
+};
 
 
 });
+
+var name = "Nyron";
+
+var skills = ['html', 'css'];
+
+var person = {
+  name: '',
+  age: 0,
+};
+
+function greet() {
+  alert("hello world!");
+}
+
+var truth = true;
+
+function gool(item) {
+  console.log(item);
+
+  if(item === '' || item === undefined) {
+    alert("Input Was Empty.");
+    return;
+  }
+
+  alert("Item = " + item);
+
+}
